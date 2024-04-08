@@ -1,29 +1,46 @@
-var numArray = [3, 5, -20, 4];
-function submit() {
-  //   var numArray = []; tạo ở đây sẽ bị ghi đè giá trị
-  // lấy giá trị user nhập
-  var number = document.querySelector("#number").value * 1;
-  numArray.push(number);
-  document.querySelector("#result").innerText = numArray;
-  var tongSoChan = 0;
-  // duyệt mảng
-  var soLuongSoAm = 0;
 
-  for (var i = 0; i < numArray.length; i++) {
-    console.log(numArray[i]);
-    if (numArray[i] % 2 == 0) {
-      tongSoChan += numArray[i];
-    }
-    if (numArray[i] < 0) {
-      soLuongSoAm++;
-    }
-  }
-  document.querySelector("#result").innerHTML = `
-  <p>${numArray}</p>
-  <p>Tổng số chẵn: ${tongSoChan}</p>
-  <p>Số lượng số âm: ${soLuongSoAm}</p>
-  `;
+
+let numberArray = [];
+
+// THEMSO
+function themSo() {
+
+    let inputNumber = document.querySelector("#inputNumber").value * 1;
+    numberArray.push(inputNumber);
+    document.querySelector("#innerNumber").innerHTML = `👉 ${numberArray} `;
 }
-submit();
 
-// array có length là 4, phần tử cuối cùng trong mảng sẽ có index là 3 ( length -1)
+//TIMSO
+function timSo() {
+
+    let outPutNumber = 0;
+    let chonChucNang = document.getElementById('chonChucNang').value;
+
+    switch (chonChucNang) {
+        case "0":
+            outPutNumber = "Hãy chọn chức năng";
+            document.querySelector('#innerTinhSo').innerHTML = `👉${outPutNumber}`;
+            break;
+        case "1":
+            outPutNumber = tongSoDuong(numberArray);
+            document.querySelector('#innerTinhSo').innerHTML = `👉  Tổng số dương :  ${outPutNumber}`;
+            break;
+        case "2":
+            outPutNumber = demSoDuong(numberArray);
+            document.querySelector('#innerTinhSo').innerHTML = `👉 Số dương : ${outPutNumber}`;
+            break;
+        case "3":
+            outPutNumber = timSoNhoNhat(numberArray);
+            document.querySelector('#innerTinhSo').innerHTML = `👉 Số nhỏ nhất : ${outPutNumber}`;
+            break;
+        case "4":
+            outPutNumber = timSoDuongNhoNhat(numberArray);
+            document.querySelector('#innerTinhSo').innerHTML = `👉 Số dương nhỏ nhất : ${outPutNumber}`;
+            break;
+        case "5":
+            outPutNumber = timSoChanCuoiCung(numberArray);
+            document.querySelector('#innerTinhSo').innerHTML = `👉 Số chẵn cuối cùng : ${outPutNumber}`;
+            break;
+    }
+
+}

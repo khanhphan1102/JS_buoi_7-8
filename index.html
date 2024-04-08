@@ -7,27 +7,54 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css    ">
 </head>
 
 <body>
     <div class="container">
-        <h2>Tổng các số dương trong mảng</h2>
+        <h2 style="text-align: center;">Bài tập JS 7-8</h2>
         <div class="item mb-5">
-            <div class="card" style="width: 50%;">
+            <div class="card" style="width: 100%;">
                 <div class="card-body">
                     <h5 class="card-title">📚 Nhập số</h5>
                     <div class="input-group mb-3">
-                        <input type="number" placeholder="Nhập điểm chuẩn" class="form-control w-40" id="diemChuan">
+                        <input type="number" placeholder="Nhập số n" class="form-control w-40" id="inputNumber">
                     </div>
-                    <button href="#" class="btn btn-primary" onclick="KetQua()">Kết quả</button>
-                    <div class="message mt-3">
-                        <div class="card" style="width: 100%;">
-                            <div class="card-body">
-                                <p id="innerKetQua"></p>
-                                <p id="innerXetTuyen"></p>
-                            </div>
+
+                    <button href="#" class="btn btn-primary" onclick="themSo()">Thêm số</button>
+                    <div class="message mt-3 mb-3">
+                        <div class="card">
+                            <p id="innerNumber">👉</p>
                         </div>
                     </div>
+                    <div class="card mb-3" style="width: 100%;">
+                        <select class="p-2" id="chonChucNang">
+                            <option value="0">Chọn chức năng </option>
+                            <option value="1">1. Tổng các số dương trong mảng.</option>
+                            <option value="2">2. Đếm có bao nhiêu số dương trong mảng.</option>
+                            <option value="3">3. Tìm số nhỏ nhất trong mảng.
+                            </option>
+                            <option value="4">4. Tìm số dương nhỏ nhất trong mảng.</option>
+                            <option value="5">5. Tìm số chẵn cuối cùng trong mảng. Nếu mảng không có giá trị chẵn thì
+                                trả về -1.</option>
+                            <option value="6">6. Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn
+                                đổi chỗ giá trị).</option>
+                            <option value="7">7. Sắp xếp mảng theo thứ tự tăng dần.</option>
+                            <option value="8">8. Tìm số nguyên tố đầu tiên trong mảng. Nếu mảng không có số nguyên tố
+                                thì trả về -1.</option>
+                            <option value="9">9. Nhập thêm 1 mảng số thực, tìm xem trong mảng có bao nhiêu số nguyên?
+                            </option>
+                            <option value="10">10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn.
+                            </option>
+                        </select>
+                    </div>
+                    <button href="#" class="btn btn-primary" onclick="timSo()">Tìm số</button>
+                    <div class="message mt-3 mb-3">
+                        <div class="card">
+                            <p id="innerTinhSo">👉</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -45,7 +72,7 @@
 
 
     <script src="./js/index.js"></script>
-    <script src="./js/ex1.js"></script>
+    <script src="./js/jsbaitapbuoi7_8.js"></script>
 
 </body>
 
