@@ -88,16 +88,16 @@ function doiChoHaiGiaTri(numberArray) {
 
     if (inputViTri1 < 0 || inputViTri1 >= numberArray.length || inputViTri2 < 0 || inputViTri2 >= numberArray.length) {
 
-        numberArray = "Hãy nhập vị trí là số dương";
+        numberArray = "Hãy nhập vị trí là số dương và không lớn hơn chiều dài của mảng ";
 
+    } else {
+        let doiViTri = numberArray[inputViTri1];
+
+        numberArray[inputViTri1] = numberArray[inputViTri2];
+    
+        numberArray[inputViTri2] = doiViTri;
     }
-
-    let doiViTri = numberArray[inputViTri1];
-
-    numberArray[inputViTri1] = numberArray[inputViTri2];
-
-    numberArray[inputViTri2] = doiViTri;
-
+    
     return numberArray;
 
 }
