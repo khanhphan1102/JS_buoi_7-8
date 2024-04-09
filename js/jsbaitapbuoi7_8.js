@@ -55,7 +55,7 @@ function timSoDuongNhoNhat(numberArray) {
 
     for (let i = 0; i < numberArray.length; i++) {
 
-        if (numberArray[i] > 0 && (soDuongNhoNhat === undefined || soDuongNhoNhat[i] < soDuongNhoNhat)) {
+        if (numberArray[i] > 0 && (soDuongNhoNhat === undefined || numberArray[i] < soDuongNhoNhat)) {
 
             soDuongNhoNhat = numberArray[i];
         }
@@ -78,4 +78,26 @@ function timSoChanCuoiCung(numberArray) {
         }
     }
     return SoChanCuoiCung;
+}
+
+//EX6 6. Đổi chỗ 2 giá trị trong mảng theo vị trí (Cho nhập vào 2 vị trí muốn đổi chỗ giá trị).
+function doiChoHaiGiaTri(numberArray) {
+
+    let inputViTri1 = document.getElementById('inputViTri1').value * 1;
+    let inputViTri2 = document.getElementById('inputViTri2').value * 1;
+
+    if (inputViTri1 < 0 || inputViTri1 >= numberArray.length || inputViTri2 < 0 || inputViTri2 >= numberArray.length) {
+
+        numberArray = "Hãy nhập vị trí là số dương";
+
+    }
+
+    let doiViTri = numberArray[inputViTri1];
+
+    numberArray[inputViTri1] = numberArray[inputViTri2];
+
+    numberArray[inputViTri2] = doiViTri;
+
+    return numberArray;
+
 }

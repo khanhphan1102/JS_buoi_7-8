@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="card mb-3" style="width: 100%;">
-                        <select class="p-2" id="chonChucNang">
+                        <select class="p-2" id="chonChucNang" onclick="AnHienInputEx6()">
                             <option value="0">Chọn chức năng </option>
                             <option value="1">1. Tổng các số dương trong mảng.</option>
                             <option value="2">2. Đếm có bao nhiêu số dương trong mảng.</option>
@@ -47,6 +47,12 @@
                             <option value="10">10. So sánh số lượng số dương và số lượng số âm xem số nào nhiều hơn.
                             </option>
                         </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control w-50%" placeholder="Nhập số thứ 1" id="inputViTri1"
+                            style="display: none;">
+                        <input type="number" class="form-control w-50%" placeholder="Nhập số thứ 2" id="inputViTri2"
+                            style="display: none;">
                     </div>
                     <button href="#" class="btn btn-primary" onclick="timSo()">Tìm số</button>
                     <div class="message mt-3 mb-3">
