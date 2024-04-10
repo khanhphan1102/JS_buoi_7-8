@@ -99,5 +99,4 @@ function doiChoHaiGiaTri(numberArray) {
     }
     
     return numberArray;
-
 }

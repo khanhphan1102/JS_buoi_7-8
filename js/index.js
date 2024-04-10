@@ -1,8 +1,8 @@
 
+// THEMSO
 
 let numberArray = [];
 
-// THEMSO
 function themSo() {
 
     let inputNumber = document.querySelector("#inputNumber").value * 1;
